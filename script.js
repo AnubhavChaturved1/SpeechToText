@@ -22,6 +22,7 @@ recognition.addEventListener('result', (e) => {
     if (e.results[0].isFinal) {
         finalTranscript = transcript + ' ';
         output.textContent = finalTranscript;
+        startButton.textContent = 'Start Listening';
     } else {
         output.textContent = transcript;
     }
@@ -29,4 +30,13 @@ recognition.addEventListener('result', (e) => {
 
 recognition.addEventListener('end', () => {
     startButton.textContent = 'Start Listening';
+    recognition.start(); // Start listening again after it ends
+});
+
+// Additional event listener to handle manual stop
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { // Stop listening when the Escape key is pressed
+        recognition.stop();
+        startButton.textContent = 'Start Listening';
+    }
 });
