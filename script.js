@@ -17,8 +17,8 @@ startButton.addEventListener('click', () => {
     recognitionTimeout = setTimeout(() => {
         recognition.stop();
         startButton.textContent = 'Start Listening';
-        output.textContent = 'Advance STT stopped due to inactivity';
-    }, 15000); // Set timeout for 15 seconds
+        output.textContent = 'stopped';
+    }, 50000); // Set timeout for 15 seconds
 });
 
 recognition.addEventListener('result', (e) => {
