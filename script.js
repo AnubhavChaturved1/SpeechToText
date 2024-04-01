@@ -20,11 +20,8 @@ recognition.addEventListener('result', (e) => {
         .join('');
 
     if (e.results[0].isFinal) {
-        finalTranscript = transcript + ' ';
-        output.textContent = finalTranscript;
-        startButton.textContent = 'Start Listening';
-    } else {
-        output.textContent = transcript;
+        finalTranscript = transcript; // Update finalTranscript with current transcript
+        output.textContent = finalTranscript; // Display current transcript
     }
 });
 
