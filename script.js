@@ -27,7 +27,7 @@ recognition.addEventListener('result', (e) => {
         setTimeout(() => {
             recognition.start();
             startButton.textContent = 'Listening...';
-        }, 1000); // Auto-start listening after 1 second
+        }, 10000); // Auto-start listening after 1 second
     } else {
         output.textContent = transcript;
     }
