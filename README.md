@@ -6,7 +6,7 @@ This is a simple web application that allows users to convert speech to text usi
 
 ## Demo
 
-You can try the live demo [here](https://example.com).
+You can try the live demo [here](https://github.com/AnubhavChaturved1/SpeechToText/blob/main/Screenshot%202024-04-01%20231330.png).
 
 ## Usage
 
